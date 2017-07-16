@@ -12,8 +12,9 @@ $(document).ready(weatherSettings);
 
   $.ajax(config).done(displayMelbourneData);
   console.log('Good');
+
   function displayMelbourneData(callback) {
-      console.log('still good');
+
     }
 
   }
