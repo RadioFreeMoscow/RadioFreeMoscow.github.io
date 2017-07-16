@@ -12,6 +12,9 @@ body {
   background-color: #fffcf4
 }
 
+nav h2 {
+  font-style: italic;
+}
 
 
 .navflex{
@@ -34,6 +37,8 @@ body {
 nav {
   flex-grow: 1;
   text-align: center;
+  margin: 0 auto;
+  padding-right: 5.8em;
 }
 
 .pipeCont {
@@ -43,7 +48,7 @@ nav {
 
 .title2 {
   text-align: center;
-  padding: 2em;
+  /*padding: 2em;*/
 }
 
 .title {
@@ -122,10 +127,10 @@ margin: 1em;
 
 .stories:nth-of-type(odd){
 white-space: normal;
-border-color: green;
+border-color: black;
 margin: 1em;
 flex:2;
-transform: rotate(180deg);
+transform: rotate(0.4deg);
 }
 
 .footerstory {
