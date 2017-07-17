@@ -4,7 +4,7 @@ var degSym = '&#8451';
   function weatherSettings () {
     var config =
     {
-      url: ' https://api.openweathermap.org/data/2.5/weather',
+      url: ' http://api.openweathermap.org/data/2.5/weather',
       data: {
         id:'7281804',
         appid: '065e043f1d8cf7b05c1d84ea90c06987'
