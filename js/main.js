@@ -1,4 +1,5 @@
 $(document).ready(weatherSettings);
+var degSym = '&#8451';
 
   function weatherSettings () {
     var config =
@@ -11,16 +12,23 @@ $(document).ready(weatherSettings);
     };
 
   $.ajax(config).done(displayMelbourneData);
-  console.log('Good');
 
   }
   function displayMelbourneData(callback) {
     console.log(callback);
-    var tempCel = callback.main.temp - 273.15;
-    console.log(tempCel.toFixed(2));
-    if (tempCel > 10) {
-      $('.weather').addClass('flaticon-021-snowflake').text(tempCel.toFixed(2));
+    var kelvin = 273.15;
+    var tempCel = callback.main.temp - kelvin;
+    var conditions = callback.weather[0].description;
+    var tempCond = (tempCel.toFixed(2)) + ('°C ') + conditions;
+
+      console.log(tempCond);
+    //
+    // console.log(conditions);
+    // console.log(tempCond);
+    //
+    if (tempCel < 10) {
+      $('.weather').addClass('flaticon-021-snowflake').text(tempCond);
     } else
-    $('.weather').text(tempCel.toFixed(2));
+    $('.weather').text(tempCond);
 
     }
