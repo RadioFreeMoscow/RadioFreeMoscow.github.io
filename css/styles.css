@@ -1,142 +1,242 @@
-
-/*fonts{
-  font-family: 'Special Elite', cursive;
-  font-family: 'Nixie One', cursive;
-  font-family: 'Cinzel Decorative', cursive;
-  font-family: 'IM Fell DW Pica SC', serif;
+/*fonts reference{
+  font-family: Special Elite , cursive;
+  font-family:  Nixie One , cursive;
+  font-family:  Cinzel Decorative , cursive;
+  font-family:  IM Fell DW Pica SC , serif;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Open Sans', sans-serif;
 
 }*/
 
 body {
-  font-family: 'IM Fell DW Pica SC', serif;
-  background-color: #fffcf4
+	font-family: 'IM Fell DW Pica SC', serif;
+	background-color: #fffcf4
 }
 
 nav h2 {
-  font-style: italic;
-}
-
-
-.navflex{
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  align-content: space-between;
-
-}
-.flexbox1 {
-
+	font-style: italic;
+	padding-top: 1em;
 }
 
 nav {
-  flex-grow: 1;
-  text-align: center;
-  margin: 0 auto;
-  padding-right: 5.8em;
+	flex-grow: 1;
+	text-align: center;
+	margin: 0 auto;
 }
+
+.navflex {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	align-content: space-between;
+}
+
+
 
 .pipeCont {
-  text-align: center;
+	text-align: center;
 }
-
-
 .title2 {
-  text-align: center;
-  /*padding: 2em;*/
+	font-family: 'IM Fell DW Pica SC', serif;
+	text-align: center;
+	display: block;
+	padding: .5em;
 }
-
 .title {
-  font-size: 0.5em;
-  width: 50%;
-  margin: 0 auto;
-
-
+	font-size: 0.5em;
+	width: 50%;
+	margin: 0 auto;
 }
-
 .border {
-  background-image: url('../images/horizontalborder.png');
-  background-size: 30% 70%;
-  background-repeat: repeat-x;
-  height: .7em;
-  width: 100%;
-
+	background-image: url(../images/horizontalborder.png );
+	background-size: 30% 70%;
+	background-repeat: repeat-x;
+	height: .7em;
+	width: 100%;
+	margin-bottom: 1em;
 }
 
-.weather{
- display: flex;
- border-style: solid;
- height: 1em;
- padding: 1em;
- justify-content: flex-end;
- margin-top: 3.5em;
- margin-left: 1em;
-}
+.border:nth-of-type(1) {
+		background-image: url(../images/horizontalborder.png );
+		background-size: 30% 70%;
+		background-repeat: repeat-x;
+		height: .7em;
+		width: 100%;
+		margin-bottom: 0px;
+	}
 
+
+.weather {
+	display: flex;
+	border-style: solid;
+	height: 1em;
+	padding: 1em;
+	justify-content: flex-end;
+	margin-top: 3.5em;
+	margin-left: 1em;
+}
 .motto {
-  font-style: italic;
-  border-style: solid;
-  height: 1em;
-  padding: 1em;
-  justify-content: flex-start;
-  margin-top: 3.5em;
-  margin-right: 1em;
+	font-style: italic;
+	border-style: solid;
+	height: 1em;
+	padding: 1em;
+	justify-content: flex-start;
+	margin-top: 3.5em;
+	margin-right: 1em;
 }
-
-
-
-.container{
-display: flex;
-justify-content: space-around;
-align-content: space-between;
-
+.container {
+	display: flex;
+	justify-content: space-around;
+	align-content: space-between;
 }
-
 .stories {
-  margin-top: 1.5em;
-  font-size: 1em;
-  margin-bottom: 1.5em;
-  border-style: solid;
-  border-width: 0.001em;
-  /*margin: 1em;*/
-  min-height: 25%;
+	margin-top: 1.5em;
+	font-size: 1em;
+	margin-bottom: 1.5em;
+	border-style: solid;
+	border-width: 0.001em;
+	/*margin: 1em;*/
+	min-height: 25%;
+}
+.stories:nth-of-type(1) {
+	flex-basis: 0;
+	flex-grow: 1;
+	margin: 1em;
+}
+.stories:nth-of-type(1) img {
+	max-width: 40%;
+	height: auto;
+	float: left;
+}
+.stories::first-letter {
+	font-size: 200%;
+	font-weight: bold;
+}
+.stories:nth-of-type(2) {
+	transform: rotate(0.5deg);
+	flex: 1;
+	margin: 1em;
+}
+.stories:nth-of-type(odd) {
+	white-space: normal;
+	border-color: black;
+	margin: 1em;
+	flex: 2;
+	transform: rotate(0.8deg);
 }
 
-.stories:nth-of-type(1){
-flex-basis: 0;
-flex-grow: 1;
-
-margin: 1em;
-}
-
-.stories::first-letter{
-  font-size: 200%;
-  font-weight: bold;
-}
-
-.stories:nth-of-type(2){
-transform: rotate(0.4deg);
-flex:1;
-margin: 1em;
-}
-
-.stories:nth-of-type(odd){
-white-space: normal;
-border-color: black;
-margin: 1em;
-flex:2;
-transform: rotate(0.4deg);
+.stories img {
+	padding: 5px;
 }
 
 .footerstory {
-  margin-top: 1em;
+	margin-top: 1em;
 }
 
-.flaticon-021-snowflake {
- 
+/*Flat Icon Handling*/
+
+.weather.flaticon-sun, .weather.flaticon-clouds, .weather.flaticon-cloudy, .weather.flaticon-cloud, .weather.flaticon-rain-11, .weather.flaticon-storm-5, .weather.flaticon-snowflake-1, .weather.flaticon-tornado-1 {
+	padding-right: 0.4em;
+}
+
+.aboutme {
+	font-family: 'Gloria Hallelujah', cursive;
+	text-align: center;
+}
+
+.profile {
+	height: auto;
+	max-width: 50%;
+	opacity: .5;
+	filter: grayscale(100%);
+
+}
+
+.list {
+	text-align: center;
+	display: inline-block;
+}
+
+.listcontainer {
+	text-align: center;
+}
+
+
+/*Sidenav*/
+.sidenav {
+	font-family: IM Fell DW Pica SC, serif;
+	background-color: #fffcf4;
+	height: 100%;
+	/* 100% Full-height */
+	width: 0;
+	/* 0 width - change this with JavaScript */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Stay on top */
+	top: 0;
+	left: 0;
+	background-color: #fffcf4;
+	/* Not black*/
+	overflow-x: hidden;
+	/* Disable horizontal scroll */
+	padding-top: 60px;
+	/* Place content 60px from the top */
+	transition: 0.5s;
+	/* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s
+}
+
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover, .offcanvas a:focus {
+	color: #f1f1f1;
+	background-image: url(../images/horizontalborder.png );
+}
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	background-image: none;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+	transition: margin-left .5s;
+	padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+	}
 }
