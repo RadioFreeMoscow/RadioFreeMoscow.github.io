@@ -25,28 +25,13 @@ function displayMelbourneData(callback) { // And we'll call the data from config
     var conditions = callback.weather[0].description; // Scattered Clouds Etc
     var tempCond = (tempCel.toFixed(2)) + ('°C ') + conditions; //Adding Rounding.
 
-
-		// Grabbing all the various conditions and appending to DOM
-    if (conditions === weatherCond[0]) {
-        $('.weather').addClass(weatherIcons[0]).text(tempCond);
-    } else if (conditions === weatherCond[1]) {
-        $('.weather').addClass(weatherIcons[1]).text(tempCond);
-    } else if (conditions === weatherCond[1]) {
-        $('.weather').addClass(weatherIcons[1]).text(tempCond);
-    } else if (conditions === weatherCond[2]) {
-        $('.weather').addClass(weatherIcons[2]).text(tempCond);
-    } else if (conditions === weatherCond[3]) {
-        $('.weather').addClass(weatherIcons[3]).text(tempCond);
-    } else if (conditions === weatherCond[4]) {
-        $('.weather').addClass(weatherIcons[4]).text(tempCond);
-    } else if (conditions === weatherCond[5]) {
-        $('.weather').addClass(weatherIcons[5]).text(tempCond);
-    } else if (conditions === weatherCond[6]) {
-        $('.weather').addClass(weatherIcons[6]).text(tempCond);
-    } else {
-        $('.weather').addClass(weatherIcons[7]).text(tempCond);
-    }
+		for (var i = 0; i <= 7; i++) {
+			if (conditions === weatherCond[i]) {
+			 $('.weather').addClass(weatherIcons[i]).text(tempCond);
+		}
+	}
 }
+
 /* Sidebar Navigation Functions */
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
